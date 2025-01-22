@@ -27,9 +27,9 @@
 
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                             &kp N6      &kp N7    &kp N8    &kp N9      &kp N0      &kp GRAVE
-&kp TAB    &kp W   &kp L   &kp Y     &kp P     &kp B                              &mt LGUI(Z) Z       &kp F     &kp O     &kp U       &kp SQT     &kp MINUS
+&kp TAB    &kp W   &kp L   &kp Y     &kp P     &kp B                              &mt (LGUI(Z)) Z       &kp F     &kp O     &kp U       &kp SQT     &kp MINUS
 &kp LCTRL  &kp C   &kp R   &kp S     &kp T     &kp G                              &kp M       &kp N     &kp E     &kp I       &kp A       &kp SEMICOLON
-&kp LSHFT  &kp Q   &kp J   &mt LGUI(LSHFT(V)) V     &kp D     &kp K   &kp LBKT                   &kp RBKT    &kp X     &kp H     &kp FSLH    &kp COMMA   &kp PERIOD      &kp RSHFT
+&kp LSHFT  &kp Q   &kp J   &mt (LGUI(LSHFT(V))) V     &kp D     &kp K   &kp LBKT                   &kp RBKT    &kp X     &kp H     &kp FSLH    &kp COMMA   &kp PERIOD      &kp RSHFT
                            &kp LALT  &kp LGUI  &mo 1   &mt LGUI(SPACE) SPACE      &kp RET     &mo 2     &kp BSPC  &kp RGUI
             >;
 
@@ -66,7 +66,7 @@
             bindings = <
 &trans  &trans            &trans          &trans        &trans        &trans                    &kp F14     &kp F15    &trans       &kp K_MUTE      &kp K_VOL_DN   &kp K_VOL_UP
 &trans  &trans            &trans          &trans        &trans        &trans                    &trans      &trans     &trans       &trans          &trans         &trans
-&trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans                    &trans      &kp LEFT   &kp DOWN     &kp UP          &kp RIGHT      &trans
+&trans  &kp LCONTROL  &kp LSHIFT  &kp LALT  &kp LGUI  &trans                    &trans      &kp LEFT   &kp DOWN     &kp UP          &kp RIGHT      &trans
 &trans  &trans            &trans          &trans        &trans        &trans  &trans    &trans  &trans      &trans     &trans       &trans          &trans         &trans
                                           &trans        &trans        &trans  &trans    &trans  &trans      &trans     &trans
             >;
