@@ -21,6 +21,7 @@
         hrm: home-row-mods {
             compatible = "zmk,behavior-hold-tap";
             lable = "HRM";
+						#bindings = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "hold-preferred";
