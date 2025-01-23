@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 &mt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <400>;
     require-prior-idle-ms = <200>;
 };
 
@@ -32,7 +32,7 @@
 &kp TAB    &kp W   &kp L   &kp Y     &kp P     &kp B                              &mt LG(Z) Z       &kp F     &kp O     &kp U       &kp SQT     &kp MINUS
 &kp LCTRL  &kp C   &kp R   &kp S     &kp T     &kp G                              &kp M       &kp N     &kp E     &kp I       &kp A       &kp SEMICOLON
 &kp LSHFT  &kp Q   &kp J   &mt LS(LA(V)) V     &kp D     &kp K   &kp LBKT                   &kp RBKT    &kp X     &kp H     &kp FSLH    &kp COMMA   &kp PERIOD      &kp RSHFT
-                           &kp LALT  &kp LGUI  &mo 1   &mt LG(SPACE) SPACE      &kp RET     &mo 2       &kp BSPC  &kp RGUI
+                           &kp LALT  &kp LGUI  &mo 1   &mt LG(SPACE) SPACE      &kp RET     &mo 2       &mt DEL BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
