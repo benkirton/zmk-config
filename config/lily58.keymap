@@ -43,6 +43,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            display-name = "CANARY";
         };
 
         lower_layer {
@@ -62,6 +63,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            display-name = "SYMBOLS";
         };
 
         raise_layer {
@@ -81,6 +83,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            display-name = "NAVIGATION";
         };
 
         game_layer {
@@ -101,6 +104,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            display-name = "GAME";
         };
 
         extra_1 { status = "reserved"; };
