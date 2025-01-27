@@ -95,11 +95,11 @@
             //                            |        |        |        |        |  |        |        |        |        |
 
             bindings = <
-&none   &none   &none   &none   &none   &none                   &none   &none   &to 0   &none   &none   &none
-&none   &none   &kp Q   &kp W   &kp E   &kp R                   &none   &none   &none   &none   &none   &none
-&none   &none   &kp A   &kp S   &kp D   &kp F                   &none   &none   &none   &none   &none   &none
-&none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-                        &none   &none   &none   &none   &none   &none   &none   &none
+&trans  &trans      &trans  &trans  &trans  &trans                      &none   &none   &to 0   &none   &none   &none
+&trans  &none       &kp Q   &kp W   &kp E   &kp R                       &none   &none   &none   &none   &none   &none
+&none   &kp LSHIFT  &kp A   &kp S   &kp D   &kp F                       &none   &none   &none   &none   &none   &none
+&none   &kp LSHIFT  &none   &none   &none   &none   &none    &none      &none   &none   &none   &none   &none   &none
+                            &none   &none   &kp C   &trans   &trans     &none   &none   &none
 
             >;
 
