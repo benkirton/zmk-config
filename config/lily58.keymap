@@ -15,9 +15,9 @@
         hrm: HomeRow {
             compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <0>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -88,14 +88,14 @@
 
         game_layer {
             // ------------------------------------------------------------------------------------------------------------
-            // |        |        |        |        |        |        |                    |        |        |  GAME  |        |        |        |
-            // |        |        |        |        |        |        |                    |        |        |        |        |        |        |
-            // |        |        |        |        |        |        |                    |        |        |        |        |        |        |
-            // |        |        |        |        |        |        |        |  |        |        |        |        |        |        |        |
-            //                            |        |        |        |        |  |        |        |        |        |
+            // |        |   1    |   2    |   3    |   4    |   5    |                    |        |        | CANARY |        |        |        |
+            // |        |        |   Q    |   W    |   E    |   R    |                    |        |        |        |        |        |        |
+            // |        | LSHFT  |   A    |   S    |   D    |   F    |                    |        |        |        |        |        |        |
+            // |        | LSHFT  |        |        |        |        |        |  |        |        |        |        |        |        |        |
+            //                            |        |        |   C    | SPACE  |  |  ENTER |        |        |        |
 
             bindings = <
-&trans  &trans      &trans  &trans  &trans  &trans                      &none   &none   &to 0   &none   &none   &none
+&trans  &kp N1      &kp N2  &kp N3  &kp N4  &kp N5                      &none   &none   &to 0   &none   &none   &none
 &trans  &none       &kp Q   &kp W   &kp E   &kp R                       &none   &none   &none   &none   &none   &none
 &none   &kp LSHIFT  &kp A   &kp S   &kp D   &kp F                       &none   &none   &none   &none   &none   &none
 &none   &kp LSHIFT  &none   &none   &none   &none   &none    &none      &none   &none   &none   &none   &none   &none
