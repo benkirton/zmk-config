@@ -45,6 +45,46 @@
         };
     };
 
+    macros {
+        dhco: deskhop_config {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_press &kp RSHFT>,
+                <&macro_tap &kp C &kp O>,
+                <&macro_release &kp RSHFT>,
+                <&macro_release &kp LCTRL>
+            ;
+        };
+        dhgm: deskhop_game_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_press &kp RSHFT>,
+                <&macro_tap &kp G>,
+                <&macro_release &kp RSHFT>,
+                <&macro_release &kp LCTRL>
+            ;
+        };
+        dhsw: deskhop_switch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp CAPSLOCK>,
+                <&macro_release &kp LCTRL>
+            ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -98,9 +138,9 @@
 
             bindings = <
 &kp F1  &kp F2              &kp F3          &kp F4          &kp F5          &kp F6                          &kp F14     &kp F15         &to 3           &kp K_MUTE  &kp K_VOL_DN    &kp K_VOL_UP
-&kp F7  &kp F8              &kp F9          &kp F10         &kp F11         &kp F12                         &trans      &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)  &kp LG(RIGHT)   &trans
-&trans  &kp LEFT_CONTROL    &kp LEFT_ALT    &kp LEFT_GUI    &kp LEFT_SHIFT  &trans                          &trans      &kp LEFT        &kp DOWN        &kp UP      &kp RIGHT       &trans
-&trans  &trans              &trans          &trans          &trans          &trans      &trans    &to 0     &trans      &kp LA(LEFT)    &kp LA(DOWN)    &kp LA(UP)  &kp LA(RIGHT)   &trans
+&kp F7  &kp F8              &kp F9          &kp F10         &kp F11         &kp F12                         &dhco       &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)  &kp LG(RIGHT)   &trans
+&trans  &kp LEFT_CONTROL    &kp LEFT_ALT    &kp LEFT_GUI    &kp LEFT_SHIFT  &trans                          &dhgm       &kp LEFT        &kp DOWN        &kp UP      &kp RIGHT       &trans
+&trans  &trans              &trans          &trans          &trans          &trans      &trans    &to 0     &dhsw       &kp LA(LEFT)    &kp LA(DOWN)    &kp LA(UP)  &kp LA(RIGHT)   &trans
                                             &trans          &trans          &trans      &trans    &trans    &trans      &trans          &trans
             >;
 
