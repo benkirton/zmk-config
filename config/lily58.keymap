@@ -52,11 +52,11 @@
             wait-ms = <30>;
             tap-ms = <40>;
             bindings =
-                <&macro_press &kp LCTRL>,
-                <&macro_press &kp RSHFT>,
-                <&macro_tap &kp C &kp O>,
-                <&macro_release &kp RSHFT>,
-                <&macro_release &kp LCTRL>
+                <&macro_press   &kp LCTRL>,
+                <&macro_press   &kp RSHFT>,
+                <&macro_press   &kp C>,
+                <&macro_press   &kp O>,
+                <&macro_release &kp O &kp C &kp RSHFT &kp LCTRL>
             ;
         };
         dhgm: deskhop_game_mode {
@@ -65,9 +65,9 @@
             wait-ms = <30>;
             tap-ms = <40>;
             bindings =
-                <&macro_press &kp LCTRL>,
-                <&macro_press &kp RSHFT>,
-                <&macro_tap &kp G>,
+                <&macro_press   &kp LCTRL>,
+                <&macro_press   &kp RSHFT>,
+                <&macro_tap     &kp G>,
                 <&macro_release &kp RSHFT>,
                 <&macro_release &kp LCTRL>
             ;
@@ -78,9 +78,23 @@
             wait-ms = <30>;
             tap-ms = <40>;
             bindings =
-                <&macro_press &kp LCTRL>,
-                <&macro_tap &kp CAPSLOCK>,
+                <&macro_press   &kp LCTRL>,
+                <&macro_tap     &kp CAPSLOCK>,
                 <&macro_release &kp LCTRL>
+            ;
+        };
+        pin: enter_pin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_tap     &kp N5>,
+                <&macro_tap     &kp N8>,
+                <&macro_tap     &kp N7>,
+                <&macro_tap     &kp N5>,
+                <&macro_tap     &kp N2>,
+                <&macro_tap     &kp N1>
             ;
         };
     };
