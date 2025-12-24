@@ -44,15 +44,6 @@
             hold-trigger-key-positions = < 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 50 53 54 56 57 >; // List of keys on the left side
             hold-trigger-on-release;
         };
-        btt: BluetoothToggle {
-            compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&out>, <&bt>;
-        };
     };
 
     macros {
@@ -124,7 +115,7 @@
 &kp ESC                 &kp N1           &kp N2         &kp N3          &kp N4          &kp N5                          &kp N6      &kp N7          &kp N8          &kp N9          &kp N0          &kp GRAVE
 &kp TAB                 &kp W            &kp L          &kp Y           &kp P           &kp B                           &kp Z       &kp F           &kp O           &kp U           &kp SQT         &kp MINUS
 &kp LS(LG(LA(LCTRL)))   &lhr LCTRL C     &lhr LALT R    &lhr LGUI S     &lhr LSHFT T    &kp G                           &kp M       &rhr RSHFT N    &rhr RGUI E     &rhr RALT I     &rhr RCTRL A    &kp SEMICOLON
-&kp LSHFT               &kp Q            &kp J          &kp V           &kp D           &kp K   &btt OUT_TOG BT_NXT     &to 1       &kp X           &kp H           &kp FSLH        &kp COMMA       &kp PERIOD      &kp DEL
+&kp LSHFT               &kp Q            &kp J          &kp V           &kp D           &kp K   &bt BT_NXT     &to 1       &kp X           &kp H           &kp FSLH        &kp COMMA       &kp PERIOD      &kp DEL
                                                 &kp LALT      &kp LGUI           &mo 1          &kp SPACE          &kp RET             &mo 2       &kp BSPC        &kp RGUI
             >;
 
@@ -164,7 +155,7 @@
 &kp F1  &kp F2              &kp F3          &kp F4          &kp F5          &kp F6                          &kp F14     &kp F15         &to 3           &kp K_MUTE  &kp K_VOL_DN    &kp K_VOL_UP
 &kp F7  &kp F8              &kp F9          &kp F10         &kp F11         &kp F12                         &dhco       &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)  &kp LG(RIGHT)   &trans
 &trans  &kp LEFT_CONTROL    &kp LEFT_ALT    &kp LEFT_GUI    &kp LEFT_SHIFT  &pin                            &dhgm       &kp LEFT        &kp DOWN        &kp UP      &kp RIGHT       &trans
-&trans  &trans              &trans          &trans          &trans          &trans      &trans    &to 0     &dhsw       &kp LA(LEFT)    &kp LA(DOWN)    &kp LA(UP)  &kp LA(RIGHT)   &trans
+&trans  &trans              &trans          &trans          &trans          &trans      &out OUT_TOG    &to 0     &dhsw       &kp LA(LEFT)    &kp LA(DOWN)    &kp LA(UP)  &kp LA(RIGHT)   &trans
                                             &trans          &trans          &trans      &trans    &trans    &trans      &trans          &trans
             >;
 
